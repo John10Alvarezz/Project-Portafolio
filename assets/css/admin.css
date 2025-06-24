@@ -1,0 +1,475 @@
+/* ========================================
+   ASSETS/CSS/ADMIN.CSS - ESTILOS DEL PANEL DE ADMINISTRACIÓN
+   ========================================
+   Este archivo contiene todos los estilos CSS personalizados
+   para el panel de administración del portafolio
+*/
+
+/* ========================================
+   CONFIGURACIÓN GENERAL DEL BODY
+   ======================================== */
+body {
+    /* Fondo claro para mejor legibilidad */
+    background-color: #f8f9fa;
+
+    /* Fuente principal del sistema */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /* Espaciado entre líneas para mejor legibilidad */
+    line-height: 1.6;
+
+    /* Color de texto principal */
+    color: #333;
+}
+
+/* ========================================
+   ESTILOS DE LA BARRA LATERAL (SIDEBAR)
+   ======================================== */
+.sidebar {
+    /* Fondo blanco para la barra lateral */
+    background-color: #fff;
+
+    /* Sombra sutil para separar del contenido */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    /* Altura mínima para ocupar toda la pantalla */
+    min-height: 100vh;
+
+    /* Padding interno para espaciado */
+    padding: 1rem;
+}
+
+/* Enlaces de navegación en la barra lateral */
+.sidebar .nav-link {
+    /* Color de texto para enlaces normales */
+    color: #6c757d;
+
+    /* Padding para mejor área de clic */
+    padding: 0.75rem 1rem;
+
+    /* Bordes redondeados */
+    border-radius: 0.375rem;
+
+    /* Transición suave para efectos hover */
+    transition: all 0.2s ease-in-out;
+
+    /* Sin decoración de texto */
+    text-decoration: none;
+}
+
+/* Estado activo de enlaces en la barra lateral */
+.sidebar .nav-link.active {
+    /* Color de fondo para enlace activo */
+    background-color: #0d6efd;
+
+    /* Color de texto blanco para contraste */
+    color: #fff;
+
+    /* Peso de fuente más grueso */
+    font-weight: 500;
+}
+
+/* Efecto hover en enlaces de la barra lateral */
+.sidebar .nav-link:hover:not(.active) {
+    /* Color de fondo sutil al hacer hover */
+    background-color: #e9ecef;
+
+    /* Color de texto más oscuro */
+    color: #495057;
+}
+
+/* ========================================
+   ESTILOS DE LAS TARJETAS DE ESTADÍSTICAS
+   ======================================== */
+/* Contenedor de tarjetas de estadísticas */
+.card {
+    /* Fondo blanco para las tarjetas */
+    background-color: #fff;
+
+    /* Bordes redondeados */
+    border-radius: 0.5rem;
+
+    /* Sombra sutil para elevación */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+    /* Borde sutil */
+    border: 1px solid rgba(0, 0, 0, 0.125);
+
+    /* Transición suave para efectos */
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+/* Efecto hover en tarjetas */
+.card:hover {
+    /* Sombra más pronunciada al hacer hover */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Encabezado de tarjetas */
+.card-header {
+    /* Fondo gris claro para el encabezado */
+    background-color: #f8f9fa;
+
+    /* Borde inferior sutil */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+    /* Padding interno */
+    padding: 0.75rem 1rem;
+
+    /* Peso de fuente más grueso */
+    font-weight: 500;
+}
+
+/* Cuerpo de tarjetas */
+.card-body {
+    /* Padding interno */
+    padding: 1rem;
+}
+
+/* ========================================
+   ESTILOS DE TABLAS
+   ======================================== */
+/* Tabla principal */
+.table {
+    /* Fondo blanco para la tabla */
+    background-color: #fff;
+
+    /* Bordes redondeados */
+    border-radius: 0.5rem;
+
+    /* Sombra sutil */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+    /* Overflow oculto para bordes redondeados */
+    overflow: hidden;
+}
+
+/* Encabezados de tabla */
+.table thead th {
+    /* Fondo gris claro para encabezados */
+    background-color: #f8f9fa;
+
+    /* Borde inferior más pronunciado */
+    border-bottom: 2px solid #dee2e6;
+
+    /* Padding interno */
+    padding: 0.75rem;
+
+    /* Peso de fuente más grueso */
+    font-weight: 600;
+
+    /* Color de texto más oscuro */
+    color: #495057;
+}
+
+/* Celdas de tabla */
+.table td {
+    /* Padding interno */
+    padding: 0.75rem;
+
+    /* Borde inferior sutil */
+    border-bottom: 1px solid #dee2e6;
+
+    /* Alineación vertical centrada */
+    vertical-align: middle;
+}
+
+/* Efecto hover en filas de tabla */
+.table tbody tr:hover {
+    /* Fondo gris muy claro al hacer hover */
+    background-color: #f8f9fa;
+}
+
+/* ========================================
+   ESTILOS DE BOTONES
+   ======================================== */
+/* Botones principales */
+.btn {
+    /* Bordes redondeados */
+    border-radius: 0.375rem;
+
+    /* Padding interno */
+    padding: 0.5rem 1rem;
+
+    /* Peso de fuente */
+    font-weight: 500;
+
+    /* Transición suave */
+    transition: all 0.15s ease-in-out;
+
+    /* Sin borde por defecto */
+    border: none;
+
+    /* Cursor pointer */
+    cursor: pointer;
+}
+
+/* Botones pequeños */
+.btn-sm {
+    /* Padding reducido */
+    padding: 0.25rem 0.5rem;
+
+    /* Tamaño de fuente más pequeño */
+    font-size: 0.875rem;
+}
+
+/* Botones de enlace */
+.btn-link {
+    /* Sin fondo */
+    background-color: transparent;
+
+    /* Color de texto azul */
+    color: #0d6efd;
+
+    /* Sin borde */
+    border: none;
+
+    /* Sin decoración de texto */
+    text-decoration: none;
+}
+
+/* Efecto hover en botones de enlace */
+.btn-link:hover {
+    /* Color de texto más oscuro */
+    color: #0a58ca;
+
+    /* Subrayado al hacer hover */
+    text-decoration: underline;
+}
+
+/* ========================================
+   ESTILOS DE FORMULARIOS
+   ======================================== */
+/* Campos de formulario */
+.form-control {
+    /* Bordes redondeados */
+    border-radius: 0.375rem;
+
+    /* Borde gris claro */
+    border: 1px solid #ced4da;
+
+    /* Padding interno */
+    padding: 0.5rem 0.75rem;
+
+    /* Transición suave */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Estado focus en campos de formulario */
+.form-control:focus {
+    /* Color de borde azul al hacer focus */
+    border-color: #86b7fe;
+
+    /* Sombra azul sutil */
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+
+    /* Sin outline por defecto */
+    outline: none;
+}
+
+/* Etiquetas de formulario */
+.form-label {
+    /* Peso de fuente más grueso */
+    font-weight: 500;
+
+    /* Color de texto más oscuro */
+    color: #495057;
+
+    /* Margen inferior */
+    margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   ESTILOS DE ALERTAS
+   ======================================== */
+/* Alertas de éxito */
+.alert-success {
+    /* Fondo verde claro */
+    background-color: #d1e7dd;
+
+    /* Color de texto verde oscuro */
+    color: #0f5132;
+
+    /* Borde verde */
+    border: 1px solid #badbcc;
+
+    /* Bordes redondeados */
+    border-radius: 0.375rem;
+
+    /* Padding interno */
+    padding: 0.75rem 1rem;
+}
+
+/* Alertas de error */
+.alert-danger {
+    /* Fondo rojo claro */
+    background-color: #f8d7da;
+
+    /* Color de texto rojo oscuro */
+    color: #721c24;
+
+    /* Borde rojo */
+    border: 1px solid #f5c2c7;
+
+    /* Bordes redondeados */
+    border-radius: 0.375rem;
+
+    /* Padding interno */
+    padding: 0.75rem 1rem;
+}
+
+/* ========================================
+   ESTILOS DE BADGES
+   ======================================== */
+/* Badges de estado */
+.badge {
+    /* Padding interno */
+    padding: 0.35em 0.65em;
+
+    /* Tamaño de fuente más pequeño */
+    font-size: 0.75em;
+
+    /* Peso de fuente más grueso */
+    font-weight: 700;
+
+    /* Bordes redondeados */
+    border-radius: 0.375rem;
+
+    /* Texto en mayúsculas */
+    text-transform: uppercase;
+}
+
+/* Badge de éxito */
+.badge.bg-success {
+    /* Fondo verde */
+    background-color: #198754 !important;
+}
+
+/* Badge de advertencia */
+.badge.bg-warning {
+    /* Fondo amarillo */
+    background-color: #ffc107 !important;
+
+    /* Color de texto oscuro para contraste */
+    color: #000 !important;
+}
+
+/* ========================================
+   ESTILOS RESPONSIVOS
+   ======================================== */
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+
+    /* Reducir padding en la barra lateral */
+    .sidebar {
+        padding: 0.5rem;
+    }
+
+    /* Ajustar padding en tarjetas */
+    .card-body {
+        padding: 0.75rem;
+    }
+
+    /* Hacer tablas scrollables horizontalmente */
+    .table-responsive {
+        /* Scroll horizontal */
+        overflow-x: auto;
+
+        /* Ocultar scroll vertical */
+        overflow-y: hidden;
+    }
+
+    /* Ajustar botones en móviles */
+    .btn {
+        /* Padding más grande para mejor área de clic */
+        padding: 0.75rem 1rem;
+
+        /* Tamaño de fuente más grande */
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   ESTILOS DE UTILIDAD
+   ======================================== */
+/* Centrar contenido */
+.text-center {
+    text-align: center;
+}
+
+/* Alinear a la derecha */
+.text-end {
+    text-align: right;
+}
+
+/* Margen superior */
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+/* Margen inferior */
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+/* Padding */
+.p-2 {
+    padding: 0.5rem;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.p-4 {
+    padding: 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+    .sidebar {
+        min-height: auto;
+        border-right: none;
+        border-bottom: 1px solid #e3e3e3;
+    }
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .navbar .navbar-nav {
+        flex-direction: row;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+}

@@ -1,0 +1,144 @@
+/* ========================================
+   STYLE.CSS - ESTILOS DEL SITIO PÚBLICO
+   ========================================
+   Este archivo contiene todos los estilos CSS personalizados
+   para el portafolio público, incluyendo animaciones y efectos
+*/
+
+/* ========================================
+   CONFIGURACIÓN GLOBAL
+   ======================================== */
+
+/* Scroll suave para navegación interna */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Color de fondo general del sitio */
+body {
+    background: #f8f9fa;
+}
+
+/* ========================================
+   SECCIÓN HERO (BANNER PRINCIPAL)
+   ======================================== */
+
+/* Gradiente de fondo para la sección hero */
+.hero-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #6f42c1 100%);
+}
+
+/* ========================================
+   TARJETAS DE PROYECTOS
+   ======================================== */
+
+/* Configuración base de las tarjetas de proyectos */
+.project-card {
+    transition: box-shadow 0.2s, opacity 0.7s, transform 0.7s;
+    /* Transiciones suaves */
+    opacity: 0;
+    /* Inicialmente invisible para animación */
+    transform: translateY(40px);
+    /* Posición inicial desplazada hacia abajo */
+}
+
+/* Configuración compartida para animaciones de aparición */
+.project-card,
+#about {
+    opacity: 0;
+    /* Inicialmente invisible */
+    transform: translateY(40px);
+    /* Desplazado hacia abajo */
+    transition: opacity 0.7s cubic-bezier(.4, 0, .2, 1), transform 0.7s cubic-bezier(.4, 0, .2, 1);
+    /* Transición suave con curva personalizada */
+}
+
+/* Estado cuando el elemento aparece en pantalla */
+.project-card.appeared,
+#about.appeared {
+    opacity: 1;
+    /* Completamente visible */
+    transform: translateY(0);
+    /* Posición final */
+}
+
+/* Efecto hover en las tarjetas de proyectos */
+.project-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+    /* Sombra más pronunciada */
+    transform: scale(1.04) translateY(-4px);
+    /* Escalar ligeramente y levantar */
+    z-index: 2;
+    /* Traer al frente */
+}
+
+/* Configuración de las imágenes dentro de las tarjetas */
+.project-card img {
+    width: 100%;
+    /* Ancho completo del contenedor */
+    height: 200px;
+    /* Altura fija */
+    object-fit: cover;
+    /* Mantener proporción sin deformar */
+    display: block;
+    /* Eliminar espacios en blanco */
+    transition: transform 0.35s cubic-bezier(.4, 0, .2, 1), box-shadow 0.18s cubic-bezier(.4, 0, .2, 1);
+    /* Transición suave */
+}
+
+/* Efecto hover en las imágenes (solo sombra, sin escalar) */
+.project-card:hover img {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+    /* Sombra al hacer hover */
+    z-index: 2;
+    /* Traer al frente */
+}
+
+/* ========================================
+   TARJETAS DE CONTACTO
+   ======================================== */
+
+/* Estilo base de las tarjetas de contacto */
+.contact-card {
+    border: 1px solid #e3e3e3;
+    /* Borde sutil */
+    border-radius: 12px;
+    /* Esquinas redondeadas */
+    background: #fff;
+    /* Fondo blanco */
+    transition: box-shadow 0.2s;
+    /* Transición suave */
+}
+
+/* Efecto hover en las tarjetas de contacto */
+.contact-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+    /* Sombra al hacer hover */
+}
+
+/* ========================================
+   BOTONES
+   ======================================== */
+
+/* Configuración base para todos los botones */
+.btn,
+.btn-primary,
+.btn-outline-light,
+.btn-dark,
+.btn-danger {
+    transition: transform 0.18s cubic-bezier(.4, 0, .2, 1), box-shadow 0.18s cubic-bezier(.4, 0, .2, 1);
+    /* Transición suave */
+    will-change: transform, box-shadow;
+    /* Optimización de rendimiento */
+}
+
+/* Efecto hover en los botones */
+.btn:hover,
+.btn:focus {
+    transform: translateY(-3px) scale(1.04);
+    /* Levantar y escalar ligeramente */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    /* Sombra al hacer hover */
+    z-index: 2;
+    /* Traer al frente */
+}
