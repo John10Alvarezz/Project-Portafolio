@@ -74,6 +74,9 @@ Project-Portafolio/
 - Claude: Se tu utilizó esta IA para hacer una estructura del proyecto y así poder trabajar en ella, además de su contribución para corregir errores y bugs.
 - Chat GPT: Se utilizó esta IA para resolver ciertos bugs.
 
+##  Despliegue del proyecto
+- [Portafolio John](https://teclab.uct.cl/~john.alvarez/Project-Portafolio/)
+
 ## 👨‍💻 Autor
 
 **John Álvarez**
